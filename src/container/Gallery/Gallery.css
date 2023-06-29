@@ -1,0 +1,134 @@
+.gallary {
+  display: flex;
+  flex-direction: row;
+  background: var(--color-black);
+  padding: 4rem 0 4rem 6rem;
+}
+.gallary-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  min-width: 500px;
+  margin-left: 2rem;
+}
+
+.gallary-content button {
+  margin-top: 1rem;
+}
+
+.gallary-images {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  max-width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.gallary-images-container {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin: 0;
+}
+.gallary-images-container::-webkit-scrollbar {
+  display: none;
+}
+
+.gallary-images-card {
+  position: relative;
+  min-width: 301px;
+  height: 447px;
+  margin-right: 2rem;
+  overflow: hidden;
+}
+.gallary-image-icon {
+  position: absolute;
+  color: #fff;
+  font-size: 2rem;
+  opacity: 0.5;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.gallary-images-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+.gallary-images-card:hover img {
+  opacity: 0.35;
+}
+.gallary-images-card:hover .gallary-image-icon {
+  opacity: 1;
+}
+
+.gallary-images-arrow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  position: absolute;
+  bottom: 5%;
+}
+.gallary-arrow-icon {
+  cursor: pointer;
+  color: var(--color-golden);
+  font-size: 2rem;
+  background-color: var(--color-black);
+  border-radius: 5px;
+}
+
+.gallary-arrow-icon:hover {
+  color: var(--color-white);
+}
+
+@media screen and (min-width: 2000px) {
+  .gallary-content {
+    min-width: 1000px;
+    padding-right: 4rem;
+  }
+  .gallary-images-card {
+    min-width: 400px;
+    height: 550px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .gallary {
+    flex-direction: column;
+  }
+  .gallary-images {
+    max-width: 100%;
+    margin: 5rem 0;
+  }
+}
+@media screen and (max-width: 850px) {
+  .gallary {
+    padding: 4rem 0 4rem 4rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .gallary {
+    padding: 4rem 2rem 0 2rem;
+    overflow: hidden;
+  }
+  .gallary-content {
+    min-width: 100%;
+  }
+  .gallary-images-card {
+    min-width: 240px;
+    height: 320px;
+  }
+  .gallary-content p {
+    width: 400px;
+  }
+}
